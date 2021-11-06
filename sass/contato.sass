@@ -1,0 +1,69 @@
+@use 'variables'
+
+@mixin formConf
+  background: variables.$light-ice
+  color: variables.$deep-blue
+  font-size: 1.2rem
+  padding: 0.5rem
+  border-radius: 8px
+  border: none
+
+*
+  padding: 0
+  marging: 0
+  box-sizing: border-box
+
+body
+  font-family: 'Poppins', 'sans-serif'
+
+.container
+  display: flex
+  align-items: center
+  background: variables.$main-blue
+
+.div-img
+  //position: absolute
+  //visibility: hidden
+  width: 40vw
+  height: auto
+  img
+    border-radius: 30px
+    width: 55%
+    margin: 3rem
+
+#area
+  display: flex
+  align-items: center
+  flex-direction: column
+  font-size: 1.2rem
+  & label
+    margin: 2rem 0
+
+#formulario
+  max-width: 50vw
+  margin-bottom: 3rem
+
+.inputs
+  padding: 1rem
+  & label
+    padding-right: 1.5rem
+    line-height: 1rem
+  & input
+    height: 2rem
+    margin: 1rem 0
+    @include formConf
+  & .msg
+    width: 22rem
+    margin-bottom: 1rem
+    @include formConf
+  & button
+    padding: 0.5rem 1rem
+    background: variables.$orange
+    color: variables.$light-ice
+    border: none
+    border-radius: 30px
+    font-size: 1.2rem
+    transition: 300ms ease-in-out
+    &:hover
+      background: variables.$light-ice
+      color: variables.$main-blue
